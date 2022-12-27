@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@-webkit-keyframes opacity {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes opacity {
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 1;
+  -webkit-animation: opacity 1s 4s both;
+          animation: opacity 1s 4s both;
+  pointer-events: none;
+}
+.loader::after {
+  content: "";
+  -webkit-animation: rotate 2s infinite ease-in-out both;
+          animation: rotate 2s infinite ease-in-out both;
+  height: 50px;
+  width: 25px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%, 0% 100%, 100% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 50% 50%, 0% 100%, 100% 100%);
+  background-image: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 20px;
+}
+.header__title__img {
+  height: 40px;
+  width: 200px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(232, 232, 232);
+  padding-block: 20px;
+  gap: 15px;
+  box-shadow: -1px -3px 5px 0px rgba(192, 192, 192, 0.8);
+}
+.localisation__description {
+  font-weight: bold;
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+}
+.information__title {
+  margin-block: 5px;
+  font-weight: bold;
+}
+.information__description {
+  margin-block: 5px;
+  font-size: 18px;
+  color: rgb(66, 66, 66);
+}
+.information__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 65%;
+  max-width: 450px;
+  background-image: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 50px;
+  color: white;
+  font-size: 14px;
+  margin-block: 15px;
+}
+.information__link a {
+  padding: 5px;
+}
+
+.processing {
+  margin-block: 25px;
+}
+.processing__title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.processing__explanation__cards {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 25px;
+  margin-block: 20px;
+  background-color: rgb(243, 243, 243);
+  height: 60px;
+  border-radius: 18px;
+  box-shadow: 1px 1px 5px 3px rgb(232, 232, 232);
+  list-style-position: inside;
+  counter-increment: step;
+}
+.processing__explanation__cards::before {
+  content: counter(step);
+  background-color: #9356DC;
+  border-radius: 25px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  margin-left: -8px;
+}
+.processing__explanation__cards i {
+  left: 35px;
+  color: rgb(136, 136, 136);
+  font-size: 17px;
+}
+.processing__explanation__cards:nth-child(3) {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.processing__explanation__cards:nth-child(3) i {
+  color: #9356DC;
+}
+
+section:nth-child(3) {
+  background-color: rgb(243, 243, 243);
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.restaurants__title {
+  font-size: 22px;
+  padding-top: 40px;
+}
+.restaurants__cards {
+  background-color: white;
+  border-radius: 20px;
+  height: 220px;
+  position: relative;
+  max-width: 400px;
+}
+.restaurants__cards:nth-child(1) a::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  height: 25px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #1b6150;
+  border-radius: 3px;
+}
+.restaurants__cards:nth-child(2) a::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  height: 25px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #1b6150;
+  border-radius: 3px;
+}
+.restaurants__article {
+  height: 100%;
+}
+.restaurants__article__img {
+  height: 70%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
+}
+.restaurants__article__description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.restaurants__article__description__title {
+  margin-bottom: 5px;
+}
+.restaurants__article__description i {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+}
+.restaurants__article__description i:hover {
+  background-image: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-clip-path: path("M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z");
+          clip-path: path("M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z");
+  color: transparent;
+}
+
+.footer {
+  background-color: rgb(53, 54, 56);
+}
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.footer__nav {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: white;
+  font-size: 14px;
+}
+.footer__list__cards {
+  display: flex;
+  gap: 8px;
+}
+.footer__list__cards i {
+  height: 13px;
+  width: 15px;
+}
+
+.body-menu header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.body-menu header a {
+  position: absolute;
+  left: 25px;
+}
+.body-menu header a i {
+  font-size: 22px;
+}
+
+.restaurant-img {
+  max-width: 100%;
+  height: 250px;
+  aspect-ratio: 5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu-section {
+  position: relative;
+  z-index: 1;
+  border-radius: 25px 25px 0 0;
+  margin-top: -25px;
+  background-color: rgb(243, 243, 243);
+}
+
+.restaurant {
+  display: flex;
+  align-items: center;
+  padding-block: 20px;
+  position: relative;
+}
+.restaurant__name {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+.restaurant i {
+  position: absolute;
+  right: 25px;
+  font-size: 20px;
+}
+.restaurant i:hover {
+  background-image: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-clip-path: path("M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z");
+          clip-path: path("M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z");
+  color: transparent;
+}
+.restaurant__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurant__menu__block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurant__menu__title {
+  font-weight: 100;
+}
+.restaurant__menu__cards {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+}
+.restaurant__menu__cards__main {
+  margin-bottom: 5px;
+}
+.restaurant__menu__cards__description {
+  display: flex;
+  font-size: 14px;
+  height: 19px;
+}
+.restaurant__menu__cards__aside {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70%;
+}
+.restaurant__menu__cards__price {
+  margin-left: auto;
+  font-weight: bold;
+}
+.restaurant__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 45px;
+}
+.restaurant__button__display {
+  height: 50px;
+  width: 65%;
+  max-width: 450px;
+  background-image: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 50px;
+  color: white;
+  font-size: 14px;
+  border: 1px solid rgb(243, 243, 243);
+}/*# sourceMappingURL=style.css.map */
