@@ -423,27 +423,50 @@ section:nth-child(3) {
             align-items: flex-end;
             background: white;
             border-radius: 15px;
-            padding: 10px;
+            overflow: hidden;
 
             &__main {
                 margin-bottom: 5px;
+            }
+
+            &__description {
+                margin-block: 10px;
+                margin-left: 10px;
             }
 
             &__aside {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 font-size: 14px;
+                height: 17px;
             }
 
             &__price {
                 margin-left: auto;
+                margin-block: 10px;
+                margin-right: 10px;
                 font-weight: bold;
                 font-size: 14px;
             }
 
             &__check {
                 background-color: $color-tertiary;
-                height: 63px;
+                height: 61px;
+                width: 44px;
+                margin-right: -45px;
+                border-radius: 0 15px 15px 0;
+                transition: all 500ms;
+                @include flex-center;
+                font-size: 20px;
+                color: white;
+            }
+
+            &:hover  {
+
+                & .restaurant__menu__cards__check {
+                    margin-right: 0;
+                }
+                
             }
         }
     }
