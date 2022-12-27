@@ -356,6 +356,7 @@ section:nth-child(3) {
   font-weight: 100;
 }
 .restaurant__menu__cards {
+  display: flex;
   background: white;
   border-radius: 15px;
   padding: 10px;
@@ -363,19 +364,19 @@ section:nth-child(3) {
 .restaurant__menu__cards__main {
   margin-bottom: 5px;
 }
-.restaurant__menu__cards__description {
-  display: flex;
-  font-size: 14px;
-  height: 19px;
-}
 .restaurant__menu__cards__aside {
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 70%;
+  font-size: 14px;
 }
 .restaurant__menu__cards__price {
   margin-left: auto;
   font-weight: bold;
+  font-size: 14px;
+}
+.restaurant__menu__cards__check {
+  background-color: #99E2D0;
+  height: 63px;
 }
 .restaurant__button {
   display: flex;
