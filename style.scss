@@ -426,7 +426,10 @@ section:nth-child(3) {
             overflow: hidden;
 
             &__main {
+                overflow: hidden;
+                text-overflow: ellipsis;
                 margin-bottom: 5px;
+                height: 19px;
             }
 
             &__description {

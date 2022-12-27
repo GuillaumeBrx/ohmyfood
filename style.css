@@ -363,7 +363,10 @@ section:nth-child(3) {
   overflow: hidden;
 }
 .restaurant__menu__cards__main {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 5px;
+  height: 19px;
 }
 .restaurant__menu__cards__description {
   margin-block: 10px;
