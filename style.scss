@@ -420,6 +420,7 @@ section:nth-child(3) {
 
         &__cards {
             display: flex;
+            align-items: flex-end;
             background: white;
             border-radius: 15px;
             padding: 10px;
