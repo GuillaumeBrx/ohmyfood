@@ -488,6 +488,11 @@ section:nth-child(3) {
 .restaurant__menu__cards:hover .restaurant__menu__cards__aside {
   max-width: 240px;
 }
+@media screen and (min-width: 425px) {
+  .restaurant__menu__cards:hover .restaurant__menu__cards__aside {
+    max-width: none;
+  }
+}
 .restaurant__button {
   display: flex;
   justify-content: center;
