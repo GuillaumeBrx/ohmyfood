@@ -190,6 +190,17 @@ ul, li {
 .processing__explanation__cards:nth-child(3) i {
   color: #9356DC;
 }
+@media screen and (min-width: 700px) {
+  .processing__explanation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+  }
+  .processing__explanation__cards {
+    width: 28%;
+  }
+}
 
 section:nth-child(3) {
   background-color: rgb(243, 243, 243);
@@ -211,7 +222,6 @@ section:nth-child(3) {
   border-radius: 20px;
   height: 220px;
   position: relative;
-  max-width: 400px;
 }
 .restaurants__cards:nth-child(1) a::before {
   content: "Nouveau";
@@ -279,6 +289,15 @@ section:nth-child(3) {
           clip-path: path("M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z");
   color: transparent;
   transition: all 200ms;
+}
+@media screen and (min-width: 700px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants__cards {
+    width: 48%;
+  }
 }
 
 .footer {

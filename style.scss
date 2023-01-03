@@ -242,6 +242,15 @@ ul, li {
                 }
             }
         }
+
+        @media screen and (min-width: 700px) {
+            @include flex-center;
+            gap: 4%;
+
+            &__cards {
+                width: 28%;
+            }
+        }
     }
 }
 
@@ -269,7 +278,6 @@ section:nth-child(3) {
         border-radius: 20px;
         height: 220px;
         position: relative;
-        max-width: 400px;
 
         @for $i from 1 through 2 {
             &:nth-child(#{$i}) {
@@ -317,6 +325,15 @@ section:nth-child(3) {
 
                 }
             }
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__cards {
+            width: 48%;
         }
     }
 }
