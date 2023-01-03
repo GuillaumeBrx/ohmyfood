@@ -69,6 +69,12 @@ $gradient: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
     }
 }
 
+@keyframes rotate360 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes appear {
     to {
         opacity: 1;
@@ -308,6 +314,7 @@ section:nth-child(3) {
 
                 &:hover {
                     @include heart-gradient;
+
                 }
             }
         }
@@ -469,6 +476,7 @@ section:nth-child(3) {
             &__aside {
                 overflow: hidden;
                 text-overflow: ellipsis;
+                white-space: nowrap;
                 font-size: 14px;
                 height: 17px;
             }
@@ -479,6 +487,7 @@ section:nth-child(3) {
                 margin-right: 10px;
                 font-weight: bold;
                 font-size: 14px;
+                transition: all 500ms;
             }
 
             &__check {
@@ -496,9 +505,20 @@ section:nth-child(3) {
             &:hover  {
 
                 & .restaurant__menu__cards__check {
-                    margin-right: 0;
+                    transform: translate(-45px);
+
+                    & i {
+                        animation: rotate360 400ms ease-in-out both;
+                    }
                 }
-                
+
+                & .restaurant__menu__cards__price {
+                    transform: translate(-45px);
+                }
+
+                & .restaurant__menu__cards__aside {
+                    max-width: 240px;
+                }
             }
         }
     }

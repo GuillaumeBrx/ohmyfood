@@ -20,6 +20,16 @@
     transform: rotate(180deg);
   }
 }
+@-webkit-keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes appear {
   to {
     opacity: 1;
@@ -421,6 +431,7 @@ section:nth-child(3) {
 .restaurant__menu__cards__aside {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 14px;
   height: 17px;
 }
@@ -430,6 +441,7 @@ section:nth-child(3) {
   margin-right: 10px;
   font-weight: bold;
   font-size: 14px;
+  transition: all 500ms;
 }
 .restaurant__menu__cards__check {
   background-color: #99E2D0;
@@ -445,7 +457,17 @@ section:nth-child(3) {
   color: white;
 }
 .restaurant__menu__cards:hover .restaurant__menu__cards__check {
-  margin-right: 0;
+  transform: translate(-45px);
+}
+.restaurant__menu__cards:hover .restaurant__menu__cards__check i {
+  -webkit-animation: rotate360 400ms ease-in-out both;
+          animation: rotate360 400ms ease-in-out both;
+}
+.restaurant__menu__cards:hover .restaurant__menu__cards__price {
+  transform: translate(-45px);
+}
+.restaurant__menu__cards:hover .restaurant__menu__cards__aside {
+  max-width: 240px;
 }
 .restaurant__button {
   display: flex;
