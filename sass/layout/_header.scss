@@ -1,0 +1,30 @@
+// HEADER 
+
+.header {
+
+    &__title {
+        @include flex-center;
+        margin-block: 20px;
+    
+        &__img {
+            height: 40px;
+            width: 200px;
+        }
+    }
+}
+
+// HEADER MENU PAGES 
+
+.body-menu header {
+    @include flex-center;
+    position: relative;
+
+    & a {
+        position: absolute;
+        left: 25px;
+
+        & i {
+            font-size: 22px;
+        }
+    }
+}

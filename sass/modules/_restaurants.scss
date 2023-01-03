@@ -1,0 +1,82 @@
+// RESTAURANTS SECTION 
+
+section:nth-child(3) {
+    background-color: $grey-light;
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    &__title {
+        font-size: 22px;
+        padding-top: 40px;
+    }
+
+    &__cards {
+        background-color: white;
+        border-radius: 20px;
+        height: 220px;
+        position: relative;
+
+        @for $i from 1 through 2 {
+            &:nth-child(#{$i}) {
+
+                & a {
+
+                    &::before {
+                        @include new;
+                    }
+                }
+            }
+        }
+    }
+
+    &__article {
+        height: 100%;
+
+        &__img {
+            height: 70%;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+            object-position: 50% 60%;
+        }
+
+        &__description {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 12px;
+            padding-top: 8px;
+
+            &__title {
+                margin-bottom: 5px;
+            }
+
+            & i {
+                position: absolute;
+                right: 15px;
+                font-size: 20px;
+
+                &:hover {
+                    @include heart-gradient;
+
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__cards {
+            width: 48%;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+// LOCALISATION / SEARCH SECTION 
+
+.localisation {
+    @include flex-center;
+    background-color: $grey-dark;
+    padding-block: 20px;
+    gap: 15px;
+    box-shadow: -1px -3px 5px 0px rgba(192, 192, 192, 0.8);
+
+    &__description {
+        font-weight: bold;
+    }
+}
+
+.information {
+    @include flex-center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    background-color: $grey-light;
+
+    &__title {
+        margin-block: 5px;
+        font-weight: bold;
+    }
+
+    &__description {
+        margin-block: 5px;
+        font-size: 18px;
+        color: rgb(66, 66, 66);
+    }
+
+    &__link {
+        @include flex-center;
+        @include button;
+        margin-block: 15px;
+    
+        & a {
+            padding: 5px;
+        }
+    }
+}
