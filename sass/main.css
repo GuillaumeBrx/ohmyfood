@@ -457,6 +457,8 @@ section:nth-child(3) {
   white-space: nowrap;
   font-size: 14px;
   height: 17px;
+  max-width: 300px;
+  transition: all 500ms;
 }
 .restaurant__menu__cards__price {
   margin-left: auto;
@@ -490,7 +492,7 @@ section:nth-child(3) {
   transform: translate(-45px);
 }
 .restaurant__menu__cards:hover .restaurant__menu__cards__aside {
-  max-width: 240px;
+  max-width: 200px;
 }
 @media screen and (min-width: 425px) {
   .restaurant__menu__cards:hover .restaurant__menu__cards__aside {

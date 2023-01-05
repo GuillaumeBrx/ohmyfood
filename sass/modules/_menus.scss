@@ -89,6 +89,8 @@
                 white-space: nowrap;
                 font-size: 14px;
                 height: 17px;
+                max-width: 300px;
+                transition: all 500ms;
             }
 
             &__price {
@@ -127,7 +129,7 @@
                 }
 
                 & .restaurant__menu__cards__aside {
-                    max-width: 240px;
+                    max-width: 200px;
 
                     @media screen and (min-width: 425px) {
                         max-width: none;
