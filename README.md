@@ -18,6 +18,7 @@ Le but de ce projet est de développer un site proposant le menu de 4 grands res
 
 ### Animations
 
+- Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. L’ombre portée devra également être plus visible.
 - Un bouton "J'aime" en forme de cœur permettra aux visiteurs de sauvegarder leurs menus préférés (effet apparaissant au survol au lieu du clic pour cette première version).
 - Un "loading spinner" devra apparaître pendant 1 à 3 secondes lors de l'arrivée sur la page d'accueil, couvrant l'intégralité de l'écran et utilisant des animations CSS (pas de librairie).
 - Les plats devront apparaître progressivement sur les pages de menu avec un léger décalage dans le temps (un par un ou par groupe). Un clic sur un plat permettra de l'ajouter à la commande (coche coulissant de la droite vers la gauche au survol pour cette première version). Si l'intitulé du plat est trop long, il sera rogné avec des points de suspension.
