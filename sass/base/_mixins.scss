@@ -27,12 +27,17 @@
     border-radius: 50px;
     color: white;
     font-size: 14px;
+    box-shadow: 2px 4px 5px #808080a8;
 }
 
 @mixin heart-gradient {
     background-image: $gradient;
     background-clip: text;
-    color: transparent;
+    -webkit-text-stroke: 0;
     transition: all 200ms;
     cursor: pointer;
+}
+
+@mixin box-shadow-darken {
+    box-shadow: 2px 4px 5px darken(#808080a8, $amount: 10);
 }

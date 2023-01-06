@@ -6,3 +6,8 @@ $grey-light: rgb(243, 243, 243);
 $grey-dark: rgb(232, 232, 232);
 
 $gradient: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+$lighten-gradient: linear-gradient(
+    180deg, 
+    lighten($color-secondary, $amount: 2.5) 0%, 
+    lighten($color-primary, $amount: 2.5) 100%
+    );

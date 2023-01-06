@@ -38,5 +38,10 @@
         & a {
             padding: 5px;
         }
+        
+        &:hover {
+            background-image: $lighten-gradient;
+            @include box-shadow-darken;
+        }
     }
 }
